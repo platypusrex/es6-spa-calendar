@@ -4399,7 +4399,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.calendar = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n\t\t<div id="controls">\n\t\t\t<a class="item" href="#/', '/', '">Back</a>\n\t\t\t<span class="item">', ', ', '</span>\n\t\t\t<a class="item" href="#/', '/', '">Forward</a>\n\t\t</div>\n\t'], ['\n\t\t<div id="controls">\n\t\t\t<a class="item" href="#/', '/', '">Back</a>\n\t\t\t<span class="item">', ', ', '</span>\n\t\t\t<a class="item" href="#/', '/', '">Forward</a>\n\t\t</div>\n\t']),
+var _templateObject = _taggedTemplateLiteral(['\n\t\t<div id="controls">\n\t\t\t<a class="item" href="#/', '/', '">Back<i class="fa fa-blind"></i></a>\n\t\t\t<span class="item">', ', ', '</span>\n\t\t\t<a class="item" href="#/', '/', '">Forward</a>\n\t\t</div>\n\t'], ['\n\t\t<div id="controls">\n\t\t\t<a class="item" href="#/', '/', '">Back<i class="fa fa-blind"></i></a>\n\t\t\t<span class="item">', ', ', '</span>\n\t\t\t<a class="item" href="#/', '/', '">Forward</a>\n\t\t</div>\n\t']),
     _templateObject2 = _taggedTemplateLiteral(['\n\t<div class="day-wrapper" data-iso="', '">\n\t\t<span class="date">', '</span>\n\t</div>\n'], ['\n\t<div class="day-wrapper" data-iso="', '">\n\t\t<span class="date">', '</span>\n\t</div>\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n\t\t', '\n\t\t<div class="calendar full-width weeks-', '">\n\t\t\t', '\n\t\t</div>\n\t'], ['\n\t\t', '\n\t\t<div class="calendar full-width weeks-', '">\n\t\t\t', '\n\t\t</div>\n\t']);
 
