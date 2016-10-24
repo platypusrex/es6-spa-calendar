@@ -1,5 +1,4 @@
 .idea
 node_modules/*
 build/*
-!build/build.xml
-build
+build/
