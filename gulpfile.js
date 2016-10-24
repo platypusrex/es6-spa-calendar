@@ -15,11 +15,19 @@ gulp.task('js', function(){
 		.pipe(gulp.dest('./build'))
 });
 
-gulp.task('sass', function () {
-	return gulp.src('./src/styles/style.scss')
+gulp.task('sass', function (){
+	return gulp.src([
+		'node_modules/font-awesome/scss',
+		'./src/styles/style.scss',
+	])
 		.pipe(sass())
 		.pipe(concat('bundle.css'))
 		.pipe(gulp.dest('./build'));
+});
+
+gulp.task('fonts', function(){
+	gulp.src('node_modules/font-awesome/fonts/*')
+		.pipe(gulp.dest('./build/fonts'))
 });
 
 gulp.task('watch', function(){
@@ -27,6 +35,6 @@ gulp.task('watch', function(){
 	gulp.watch('./src/**/*.js', ['js']);
 });
 
-gulp.task('default', ['js', 'sass']);
+gulp.task('default', ['js', 'fonts', 'sass']);
 
 gulp.task('serve', ['watch']);

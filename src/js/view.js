@@ -1,4 +1,5 @@
 import {calendar} from './template';
+import {$dayWrapperStyle} from './util';
 
 export default class View {
 	constructor(){
@@ -7,5 +8,6 @@ export default class View {
 
 	render(data) {
 		this.el.innerHTML = calendar(data);
+		$dayWrapperStyle();
 	}
 }

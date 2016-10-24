@@ -1,48 +1,7 @@
-#controls {
-  display: flex;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import 'partials/controls';
+@import 'partials/calendar';
 
-  .item {
-    padding: 5px;
-  }
-}
-
-.calendar.full-width {
-  display: flex;
-  width: 405px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-.day-wrapper:nth-child(-n+6) {
-  border-top: 1px solid #ccc;
-}
-
-.day-wrapper:nth-child(6n+1) {
-  border-left: 1px solid #ccc;
-}
-
-.day-wrapper:nth-child(6n+6),
-.day-wrapper:last-child {
-  border-right: 1px solid #ccc;
-
-}
-
-.day-wrapper {
-  display: flex;
-  width: 60px;
-  height: 60px;
-  flex-wrap: nowrap;
-  border: 1px solid #ccc;
-  border-right: none;
-  border-top: none;
-  padding: 3px;
-
-  .date {
-    font-size: 12px;
-    color: orchid;
-  }
+#app {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }

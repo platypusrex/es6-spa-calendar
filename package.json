@@ -17,6 +17,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "font-awesome": "^4.6.3",
     "gulp-concat": "^2.6.0",
     "gulp-sass": "^2.3.2",
     "sassify": "^2.0.0"
