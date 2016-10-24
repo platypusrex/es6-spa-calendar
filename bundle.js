@@ -4457,7 +4457,7 @@ var calendar = function calendar(data) {
 exports.calendar = calendar;
 
 },{"moment":1}],6:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -4466,7 +4466,18 @@ var $on = function $on(target, event, handler) {
 	target.addEventListener(event, handler);
 };
 
+var $dayWrapperStyle = function $dayWrapperStyle() {
+	return Array.from(document.querySelectorAll('.day-wrapper')).filter(function (element, i) {
+		if (i >= 28 && parseInt(element.innerText) < 2) {
+			return element;
+		}
+	}).map(function (element) {
+		element.style.background = '#efefef';
+	});
+};
+
 exports.$on = $on;
+exports.$dayWrapperStyle = $dayWrapperStyle;
 
 },{}],7:[function(require,module,exports){
 'use strict';
@@ -4478,6 +4489,8 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _template = require('./template');
+
+var _util = require('./util');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -4492,6 +4505,7 @@ var View = function () {
 		key: 'render',
 		value: function render(data) {
 			this.el.innerHTML = (0, _template.calendar)(data);
+			(0, _util.$dayWrapperStyle)();
 		}
 	}]);
 
@@ -4500,4 +4514,4 @@ var View = function () {
 
 exports.default = View;
 
-},{"./template":5}]},{},[3]);
+},{"./template":5,"./util":6}]},{},[3]);
