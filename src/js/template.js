@@ -24,9 +24,13 @@ const controls = (data) => {
 
 	return html`
 		<div id="controls">
-			<a class="item" href="#/${prev.format('MM')}/${prev.format('YYYY')}">Back</a>
+			<a class="item" href="#/${prev.format('MM')}/${prev.format('YYYY')}">
+				<i class="fa fa-chevron-left"></i>
+			</a>
 			<span class="item">${curr.format('MMMM')}, ${curr.format('YYYY')}</span>
-			<a class="item" href="#/${next.format('MM')}/${next.format('YYYY')}">Forward</a>
+			<a class="item" href="#/${next.format('MM')}/${next.format('YYYY')}">
+				<i class="fa fa-chevron-right"></i>
+			</a>
 		</div>
 	`
 };

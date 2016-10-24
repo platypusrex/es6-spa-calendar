@@ -25,16 +25,16 @@ gulp.task('sass', function (){
 		.pipe(gulp.dest('./build'));
 });
 
-// gulp.task('fonts', function(){
-// 	gulp.src('node_modules/font-awesome/fonts/*')
-// 		.pipe(gulp.dest('./build/fonts'))
-// });
+gulp.task('fonts', function(){
+	gulp.src('node_modules/font-awesome/fonts/*')
+		.pipe(gulp.dest('./fonts'))
+});
 
 gulp.task('watch', function(){
 	gulp.watch('./src/styles/**/*.scss', ['sass']);
 	gulp.watch('./src/**/*.js', ['js']);
 });
 
-gulp.task('default', ['js', 'sass']);
+gulp.task('default', ['js', 'fonts', 'sass']);
 
 gulp.task('serve', ['watch']);
